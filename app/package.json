@@ -1,0 +1,7 @@
+{
+  "name": "docksbruxsel",
+  "description": "ElectronApp",
+  "version": "1.0.0" ,
+  "author": "bewi",
+  "main": "main.js"
+}
