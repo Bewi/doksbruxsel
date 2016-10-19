@@ -3,10 +3,7 @@
   "description": "ElectronApp",
   "version": "1.0.0",
   "build": {
-    "appId": "docks.bruxsel",
-     "win": {
-      "iconUrl": "(windows-only) https link to icon"
-    }
+    "appId": "docks.bruxsel"
   },
   "scripts": {
     "pack": "build --dir",
