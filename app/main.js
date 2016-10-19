@@ -10,7 +10,8 @@ let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600, kiosk: true, show: true})
+  mainWindow = new BrowserWindow({width: 800, height: 600, kiosk: true, show: false, alwaysOnTop: true, webPreferences: { nodeIntegration : false }});
+  
   mainWindow.setMenu(null);
   // and load the index.html of the app.
   // mainWindow.loadURL(`file://${__dirname}/index.html`)
@@ -23,8 +24,12 @@ function createWindow () {
     // when you should delete the corresponding element.
     mainWindow = null
   })
+  
+  mainWindow.once('ready-to-show', () => {
+    mainWindow.show()
+})
 
-  // mainWindow.webContents.openDevTools()
+//   mainWindow.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished
